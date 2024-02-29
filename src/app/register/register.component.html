@@ -1,0 +1,66 @@
+<div class="container-fluid img">
+  <div class="row">
+    <div class="col-md-4 mx-auto mt-5">
+      <div class="card mt-5 card1">
+        <div class="card-body">
+          <h4 class="card-title text-center">Login</h4>
+          <form (ngSubmit)="signUp()" [formGroup]="registerForm">
+            <div class="form-group">
+              <label for="email">Name</label>
+              <input
+                type="text"
+                name="name"
+                id="name"
+                class="form-control"
+                formControlName="name"
+              />
+            </div>
+            <div class="form-group mt-2">
+              <label for="email">Email</label>
+              <input
+                type="email"
+                name="email"
+                id="email"
+                class="form-control"
+                formControlName="email"
+              />
+            </div>
+            <div class="form-group mt-2">
+              <label for="password">Password</label>
+              <input
+                type="password"
+                name="password"
+                id="password"
+                class="form-control"
+                formControlName="password"
+              />
+            </div>
+            <div class="form-group mt-2">
+              <label for="password_confirmation">Confirm Password</label>
+              <input
+                type="password"
+                name="password_confirmation"
+                id="password_confirmation"
+                class="form-control"
+                formControlName="password_confirmation"
+              />
+            </div>
+
+            <div class="row">
+              <div class="col-md-3 mt-2">
+                <button type="submit" class="btn btn-success" [disabled]="!registerForm.valid">
+                  Register
+                </button>
+              </div>
+              <div class="col-md-3 mt-2">
+                <button type="submit" class="btn btn-block btn-info" (click)="loadLog()">
+                  Login
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
